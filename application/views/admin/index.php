@@ -120,6 +120,7 @@
 			<script type="text/javascript" src="<?php echo base_url('my/datas/nav.js') ?>"></script>
 			<script src="<?php echo base_url('my/js/index.js') ?>"></script>
 			<script>
+
 				layui.use('layer', function() {
 					var $ = layui.jquery,
 						layer = layui.layer;
