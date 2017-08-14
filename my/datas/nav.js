@@ -1,26 +1,31 @@
+
 var navs = [{
-	"title": "基本元素",
+	"title": "商品管理",
 	"icon": "fa-cubes",
 	"spread": true,
 	"children": [{
-		"title": "按钮",
-		"icon": "&#xe641;",
-		"href": "button.html"
+		"title": "商品列表",
+		"icon": "",
+		"href": window.location.href + '/goods_list'
 	}, {
-		"title": "表单",
-		"icon": "&#xe63c;",
+		"title": "商品分类",
+		"icon": "",
 		"href": "form.html"
 	}, {
-		"title": "表格",
-		"icon": "&#xe63c;",
+		"title": "用户评论",
+		"icon": "",
 		"href": "table.html"
 	}, {
-		"title": "导航",
-		"icon": "&#xe609;",
+		"title": "商品品牌",
+		"icon": "",
 		"href": "nav.html"
 	}, {
-		"title": "辅助性元素",
-		"icon": "&#xe60c;",
+		"title": "商品类型",
+		"icon": "",
+		"href": "auxiliar.html"
+	},{
+		"title": "商品回收站",
+		"icon": "",
 		"href": "auxiliar.html"
 	}]
 }, {

@@ -24,7 +24,7 @@
 				<div class="layui-main">
 					<div class="admin-login-box">
 						<a class="logo" style="left: 0;" href="<?php echo site_url('i') ?>">
-							<span style="font-size: 22px;">BamShenAdmin</span>
+							<span style="font-size: 22px;">RamShenAdmin</span>
 						</a>
 						<div class="admin-side-toggle">
 							<i class="fa fa-bars" aria-hidden="true"></i>
@@ -86,7 +86,7 @@
 					</ul>
 					<div class="layui-tab-content" style="min-height: 150px; padding: 5px 0 0 0;">
 						<div class="layui-tab-item layui-show">
-							<iframe src="<?php echo site_url('admin/admin/main') ?>"></iframe>
+							<iframe src="<?php echo site_url('i/main') ?>"></iframe>
 						</div>
 					</div>
 				</div>

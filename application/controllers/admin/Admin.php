@@ -20,4 +20,14 @@ class Admin extends RM_Controller
     	$this->load->view('admin/video');
     }
 
+    public function goods_list()
+    {
+    	$this->load->view('admin/goods_list');
+    }
+
+    public function goods_list_conter()
+    {
+    	$this->load->view('admin/goods_list_conter');
+    }
+
 }

@@ -57,3 +57,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['default_controller'] = 'index/index';
 $route['a'] = 'admin/login';//后台登录地址
 $route['i'] = 'admin/admin';//后台主页
+$route['i/(:any)'] = 'admin/admin/$1';//后台
