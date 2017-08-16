@@ -36,70 +36,38 @@
 		        <th>热销</th>
 		        <th>推荐排序</th>
 		        <th>库存</th>
+		        <th>虚拟销量</th>
 		        <th>操作</th>
 		      </tr> 
 		    </thead>
 		    <tbody>
+		      <?php foreach ($goods as $v): ?>
 		      <tr>
 		        <td><input type="checkbox" name="" lay-skin="primary"></td>
-		        <td>善品</td>
-		        <td>汉族</td>
-		        <td>1989-10-14</td>
-		        <td>人生似修行</td>
-		        <td>人生似修行</td>
-		        <td>人生似修行</td>
-		        <td>人生似修行</td>
-		        <td>人生似修行</td>
-		        <td>人生似修行</td>
-		        <td>人生似修行</td>
-		        <td>人生似修行</td>
+		        <td><?=$v['goods_id'] ?></td>
+		        <td><?=$v['goods_name'] ?></td>
+		        <td><?=$v['goods_sn'] ?></td>
+		        <td><?=$v['shop_price'] ?></td>
+		        <td><i class="layui-icon switch"><?php if($v['is_on_sale']): ?>&#xe618;<?php else: ?>&#x1006;<?php endif; ?></i></td>
+		        <td><i class="layui-icon switch"><?php if($v['is_best']): ?>&#xe618;<?php else: ?>&#x1006;<?php endif; ?></i></td>
+		        <td><i class="layui-icon switch"><?php if($v['is_new']): ?>&#xe618;<?php else: ?>&#x1006;<?php endif; ?></i></td>
+		        <td><i class="layui-icon switch"><?php if($v['is_hot']): ?>&#xe618;<?php else: ?>&#x1006;<?php endif; ?></i></td>
+		        <td><?=$v['sort_order'] ?></td>
+		        <td><?=$v['goods_number'] ?></td>
+		        <td><?=$v['virtual_sales'] ?></td>
+		        <td>
+		        	<a href="" target="_blank" title="浏览"><i class="layui-icon">&#xe615;</i></a>
+		        	<a href="" title="编剧"><i class="layui-icon">&#xe642;</i></a>
+		        	<a href="" title="复制"><i class="layui-icon">&#xe60a;</i></a>
+		        	<a href="" title="删除"><i class="layui-icon">&#xe640;</i></a>
+		        </td>
 		      </tr>
-		      <tr>
-		        <td><input type="checkbox" name="" lay-skin="primary"></td>
-		        <td>张爱玲</td>
-		        <td>汉族</td>
-		        <td>1920-09-30</td>
-		        <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
-		      </tr>
-		      <tr>
-		        <td><input type="checkbox" name="" lay-skin="primary"></td>
-		        <td>Helen Keller</td>
-		        <td>拉丁美裔</td>
-		        <td>1880-06-27</td>
-		        <td> Life is either a daring adventure or nothing.</td>
-		      </tr>
-		      <tr>
-		        <td><input type="checkbox" name="" lay-skin="primary"></td>
-		        <td>岳飞</td>
-		        <td>汉族</td>
-		        <td>1103-北宋崇宁二年</td>
-		        <td>教科书再滥改，也抹不去“民族英雄”的事实</td>
-		      </tr>
-		      <tr>
-		        <td><input type="checkbox" name="" lay-skin="primary"></td>
-		        <td>孟子</td>
-		        <td>华夏族（汉族）</td>
-		        <td>公元前-372年</td>
-		        <td>猿强，则国强。国强，则猿更强！ </td>
-		      </tr>
+		  	  <?php endforeach; ?>
+		      
 		    </tbody>
 		  </table>
 		</div>
 		<script type="text/javascript" src="<?php echo base_url('layui/layui.js') ?>"></script>
-		<script>
-		layui.use('form', function(){
-		  var $ = layui.jquery, form = layui.form();
-		  
-		  //全选
-		  form.on('checkbox(allChoose)', function(data){
-		    var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]');
-		    child.each(function(index, item){
-		      item.checked = data.elem.checked;
-		    });
-		    form.render('checkbox');
-		  });
-		  
-		});
-		</script>
+		<script type="text/javascript" src="<?php echo base_url('my/admin/goods_list_conter.js') ?>"></script>
 	</body>
 </html>

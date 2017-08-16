@@ -17,6 +17,7 @@ layui.define(['layer', 'form'], function(exports){
 	//监听提交
 	form.on('submit(formDemo)', function(data){
 		var result;
+		
 		$.ajaxSettings.async = false;
 		$.post('admin/login/get_login',{username:data.field.username},function(res){
 			result = res;
@@ -24,7 +25,7 @@ layui.define(['layer', 'form'], function(exports){
 		$.ajaxSettings.async = true;
 		console.log(result)
 
-		if(result.error == 'error' || data.field.username != result[0].name || md5(data.field.password) != result[0].password){
+		if(result.error == 'error' || data.field.username != result[0].user_name || md5(md5(data.field.password)+result[0].ec_salt) != result[0].password){
 			layer.msg('用户名或者密码错误!');
 			return false;
 		}
@@ -32,7 +33,7 @@ layui.define(['layer', 'form'], function(exports){
 			layer.msg('验证码错误!');
 			return false;
 		}
-		$('#aid').val(result[0].aid);
+		$('#user_id').val(result[0].user_id);
 		
 	});
   

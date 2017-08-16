@@ -6,13 +6,6 @@
   <title>智能后台</title>
   <link rel="stylesheet" href="<?php echo base_url('layui/css/layui.css'); ?>">
 </head>
-<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script>
-<script src="<?php echo base_url('layui/layui.js');?>"></script>
-<script type="text/javascript">
-layui.config({
-  base: "<?php echo base_url('my/') ?>" //你的模块目录
-}).use('login'); //加载入口
-</script>
 <body>
 
 <!-- 你的HTML代码 -->
@@ -49,12 +42,18 @@ layui.config({
       <div class="layui-input-block">
         <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
         <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-        <input type="hidden" name="aid" id="aid" value="" />
+        <input type="hidden" name="user_id" id="user_id" value="" />
       </div>
     </div>
   </form>
 </div> 
-
+<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script>
+<script src="<?php echo base_url('layui/layui.js');?>"></script>
+<script type="text/javascript">
+layui.config({
+  base: "<?php echo base_url('my/admin/') ?>" //你的模块目录
+}).use('login'); //加载入口
+</script>
   
 </body>
 </html>

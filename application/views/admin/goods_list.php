@@ -11,7 +11,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="format-detection" content="telephone=no">
 		<link rel="stylesheet" href="<?php echo base_url('layui/css/layui.css') ?>" media="all" />
-		<link rel="stylesheet" href="<?php echo base_url('my/css/global.css') ?>" media="all">
+		<link rel="stylesheet" href="<?php echo base_url('my/admin/css/global.css') ?>" media="all">
 		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
 	</head>
 
@@ -81,8 +81,8 @@
 			    	<button class="layui-btn">搜索</button>
 			    </div>
 			</div>
-			<div>
-			<iframe frameborder=0 scrolling=yes height=100% width=100% src="<?php echo site_url('i/goods_list_conter') ?>"></iframe>
+			<div class="biaoge">
+			<iframe frameborder=0 scrolling=auto width=100% src="<?php echo site_url('i/goods_list_conter') ?>"></iframe>
 			</div>
 		</form>
 		<script type="text/javascript" src="<?php echo base_url('layui/layui.js') ?>"></script>
@@ -91,8 +91,16 @@
 		  var form = layui.form()
 		  ,layer = layui.layer
 		  ,layedit = layui.layedit
-		  ,laydate = layui.laydate;
-		  
+		  ,laydate = layui.laydate
+		  ,$ = layui.jquery;
+		  //iframe自适应
+			$(window).on('resize', function() {
+				var $content = $('.biaoge');
+				$content.height($(this).height() - 147);
+				$content.find('iframe').each(function() {
+					$(this).height($content.height());
+				});
+			}).resize();
 		  //创建一个编辑器
 		  var editIndex = layedit.build('LAY_demo_editor');
 		 

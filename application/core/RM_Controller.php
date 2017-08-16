@@ -7,9 +7,9 @@ class RM_Controller extends CI_Controller
 	{
 		parent::__construct(); 
 
-		$username = $this->session->userdata('username');
-		$aid = $this->session->userdata('aid');
-		if(!$username || !$aid)
+		$user_name = $this->session->userdata('user_name');
+		$user_id = $this->session->userdata('user_id');
+		if(!$user_name || !$user_id)
 		{
 			redirect('a');
 		}

@@ -13,7 +13,7 @@
 		<meta name="format-detection" content="telephone=no">
 
 		<link rel="stylesheet" href="<?php echo base_url('layui/css/layui.css') ?>" media="all" />
-		<link rel="stylesheet" href="<?php echo base_url('my/css/global.css') ?>" media="all">
+		<link rel="stylesheet" href="<?php echo base_url('my/admin/css/global.css') ?>" media="all">
 		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
 
 	</head>
@@ -45,7 +45,7 @@
 						</li>
 						<li class="layui-nav-item">
 							<a href="javascript:;" class="admin-header-user">
-								<img src="<?php echo base_url('my/images/0.jpg') ?>" />
+								<img src="<?php echo base_url('my/admin/images/0.jpg') ?>" />
 								<span><?php echo $username ?></span>
 							</a>
 							<dl class="layui-nav-child">
@@ -117,8 +117,8 @@
 			<!--锁屏模板 end -->
 			
 			<script type="text/javascript" src="<?php echo base_url('layui/layui.js') ?>"></script>
-			<script type="text/javascript" src="<?php echo base_url('my/datas/nav.js') ?>"></script>
-			<script src="<?php echo base_url('my/js/index.js') ?>"></script>
+			<script type="text/javascript" src="<?php echo base_url('my/admin/datas/nav.js') ?>"></script>
+			<script src="<?php echo base_url('my/admin/js/index.js') ?>"></script>
 			<script>
 
 				layui.use('layer', function() {

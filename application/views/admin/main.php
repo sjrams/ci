@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="<?php echo base_url('layui/css/layui.css') ?>" media="all" />
-		<link rel="stylesheet" href="<?php echo base_url('my/css/main.css') ?>" />
+		<link rel="stylesheet" href="<?php echo base_url('my/admin/css/main.css') ?>" />
 	</head>
 
 	<body>

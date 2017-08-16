@@ -36,8 +36,8 @@ class Login extends CI_Controller
 	{
 		$data = $this->input->post();
 		$session_data = array(
-			'aid'	=>	$data['aid'],
-			'username'	=>	$data['username']
+			'user_id'	=>	$data['user_id'],
+			'user_name'	=>	$data['username']
 			);
 		$this->session->set_userdata($session_data);
 		redirect('i');
@@ -45,8 +45,8 @@ class Login extends CI_Controller
 	//退出
 	public function login_out()
 	{
-		$this->session->unset_userdata('username');
-		$this->session->unset_userdata('aid');
+		$this->session->unset_userdata('user_name');
+		$this->session->unset_userdata('user_id');
 		redirect('a');
 	}
 }
