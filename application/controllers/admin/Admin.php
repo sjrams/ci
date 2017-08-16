@@ -44,7 +44,15 @@ class Admin extends RM_Controller
     public function get_goods() //获取商品详情
     {
     	$id = $this->input->post('goods_id');
-    	$data = $this->model->get_goods($id);
+        $is = $this->input->post('data');
+        $data = $this->model->get_goods($id);
+        if($data[0][$is]){
+            $arr = array($is=>0);
+        }else{
+            $arr = array($is=>1);
+        }
+       
+        $this->model->set_goods($id,$arr);
     	echo json_encode($data);
     }
 }

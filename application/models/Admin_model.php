@@ -20,4 +20,9 @@ class Admin_model extends CI_Model
 		$data = $this->db->get_where('goods',array('goods_id'=>$id))->result_array();
 		return $data;
 	}
+
+	public function set_goods($id,$arr)//修改商品参数
+	{
+		$this->db->update('goods',$arr,array('goods_id'=>$id));
+	}
 }

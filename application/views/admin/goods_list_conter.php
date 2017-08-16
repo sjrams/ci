@@ -48,10 +48,10 @@
 		        <td><?=$v['goods_name'] ?></td>
 		        <td><?=$v['goods_sn'] ?></td>
 		        <td><?=$v['shop_price'] ?></td>
-		        <td><i class="layui-icon switch"><?php if($v['is_on_sale']): ?>&#xe618;<?php else: ?>&#x1006;<?php endif; ?></i></td>
-		        <td><i class="layui-icon switch"><?php if($v['is_best']): ?>&#xe618;<?php else: ?>&#x1006;<?php endif; ?></i></td>
-		        <td><i class="layui-icon switch"><?php if($v['is_new']): ?>&#xe618;<?php else: ?>&#x1006;<?php endif; ?></i></td>
-		        <td><i class="layui-icon switch"><?php if($v['is_hot']): ?>&#xe618;<?php else: ?>&#x1006;<?php endif; ?></i></td>
+		        <td><i class="layui-icon switch" data-i="is_on_sale"><?php if($v['is_on_sale']): ?>&#xe618;<?php else: ?>&#x1006;<?php endif; ?></i></td>
+		        <td><i class="layui-icon switch" data-i="is_best"><?php if($v['is_best']): ?>&#xe618;<?php else: ?>&#x1006;<?php endif; ?></i></td>
+		        <td><i class="layui-icon switch" data-i="is_new"><?php if($v['is_new']): ?>&#xe618;<?php else: ?>&#x1006;<?php endif; ?></i></td>
+		        <td><i class="layui-icon switch" data-i="is_hot"><?php if($v['is_hot']): ?>&#xe618;<?php else: ?>&#x1006;<?php endif; ?></i></td>
 		        <td><?=$v['sort_order'] ?></td>
 		        <td><?=$v['goods_number'] ?></td>
 		        <td><?=$v['virtual_sales'] ?></td>

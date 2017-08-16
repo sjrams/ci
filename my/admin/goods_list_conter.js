@@ -1,6 +1,6 @@
 layui.use('form', function(){
   var $ = layui.jquery, form = layui.form();
-  
+  $(".switch").css("cursor","pointer");
   //全选
   form.on('checkbox(allChoose)', function(data){
     var child = $(data.elem).parents('table').find('tbody input[type="checkbox"]');
@@ -12,13 +12,16 @@ layui.use('form', function(){
   
   $(".switch").click(function(){
   	var goods_id = $(this).parent().parent().find('td').eq(1).html(),
-  		this = $(this);
+  		  thiss = $(this),
+        data = $(this).data('i');
 
-	$.post('admin/admin/get_goods',{goods_id:goods_id},function(res){
-		if( res[0].is_on_sale == 1){
-	  		this.html("&#x1006;");
+	$.post('get_goods',{goods_id:goods_id,data:data},function(res){
+    console.log(res)
+    var obj = eval(res);
+		if( obj[0][data] == 1){
+	  		thiss.html("&#x1006;");
 	  	}else{  		
-	  		this.html("&#xe618;");
+	  		thiss.html("&#xe618;");
 	  	}
 	},'json');
   	
