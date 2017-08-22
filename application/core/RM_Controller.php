@@ -11,7 +11,8 @@ class RM_Controller extends CI_Controller
 		$user_id = $this->session->userdata('user_id');
 		if(!$user_name || !$user_id)
 		{
-			redirect('a');
+			//redirect('a');
+			echo "<script>top.location.href=".site_url('a')."</script>";
 		}
 	}
 }

@@ -57,7 +57,7 @@
 		        <td><?=$v['virtual_sales'] ?></td>
 		        <td>
 		        	<a href="" target="_blank" title="浏览"><i class="layui-icon">&#xe615;</i></a>
-		        	<a href="" title="编剧"><i class="layui-icon">&#xe642;</i></a>
+		        	<a href="<?php echo site_url('admin/admin/add_goods/'.$v['goods_id']) ?>" title="编剧"><i class="layui-icon">&#xe642;</i></a>
 		        	<a href="" title="复制"><i class="layui-icon">&#xe60a;</i></a>
 		        	<a href="" title="删除"><i class="layui-icon">&#xe640;</i></a>
 		        </td>
@@ -66,6 +66,31 @@
 		      
 		    </tbody>
 		  </table>
+		  <div style="display:flex;justify-content:space-between">
+		  	<div class="layui-form-item" style="margin-left:1%">
+			    <div class="layui-input-inline">
+			      <select name="quiz1">
+			        <option value="">请选择</option>
+			        <option value="回收站">回收站</option>
+			        <option value="上架">上架</option>
+			        <option value="下架">下架</option>
+			        <option value="精品">精品</option>
+			        <option value="取消精品">取消精品</option>
+			        <option value="新品">新品</option>
+			        <option value="取消新品">取消新品</option>
+			        <option value="热销">热销</option>
+			        <option value="取消热销">取消热销</option>
+			        <option value="转移到分类">转移到分类</option>
+			      </select>
+			    </div>
+			    <button class="layui-btn">确定</button>
+			  </div>
+			<div style="margin-right:1%" class="layui-box layui-laypage layui -laypage-default" id="layui-laypage-0">
+			  	<?php echo $links ?>
+			</div>
+		  </div>
+		  
+		  
 		</div>
 		<script type="text/javascript" src="<?php echo base_url('layui/layui.js') ?>"></script>
 		<script type="text/javascript" src="<?php echo base_url('my/admin/goods_list_conter.js') ?>"></script>

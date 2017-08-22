@@ -16,7 +16,7 @@
 	</head>
 
 	<body>
-		<button class="layui-btn layui-btn-warm">添加新商品</button>
+		<a href="<?php echo site_url('i/add_goods') ?>"><button class="layui-btn layui-btn-warm">添加新商品</button></a>
 
 		<form class="layui-form" action="">
 			<div class="layui-form-item">
@@ -81,9 +81,8 @@
 			    	<button class="layui-btn">搜索</button>
 			    </div>
 			</div>
-			<div class="biaoge">
-			<iframe frameborder=0 scrolling=auto width=100% src="<?php echo site_url('i/goods_list_conter') ?>"></iframe>
-			</div>
+			<?php $this->load->view('admin/libraries/goods_list_conter') ?>
+			
 		</form>
 		<script type="text/javascript" src="<?php echo base_url('layui/layui.js') ?>"></script>
 		<script>

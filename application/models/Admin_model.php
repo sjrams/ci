@@ -21,6 +21,27 @@ class Admin_model extends CI_Model
 		return $data;
 	}
 
+	public function get_cat_list() //获取所有商品分类
+	{
+        $data = $this->db->get_where('category',array('parent_id'=>0))->result_array();
+        foreach ($data as $key => $value) {
+        	$data[$key]['has_children'] = $this->db->get_where('category',array('parent_id'=>$value['cat_id']))->result_array();
+        }
+        return $data;
+	}
+
+	public function get_brand()//获取所有品牌
+	{
+		$data = $this->db->get('brand')->result_array();
+		return $data;
+	}
+
+	public function get_goods_type()//获取所有商品类型
+	{
+		$data = $this->db->get('goods_type')->result_array();
+		return $data;
+	}
+
 	public function set_goods($id,$arr)//修改商品参数
 	{
 		$this->db->update('goods',$arr,array('goods_id'=>$id));
